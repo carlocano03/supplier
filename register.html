@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link href="assets/img/RITM-Logo.png" rel="icon">
+    <title>IVDMD-RITM</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/custom-style.css" rel="stylesheet" />
+
+    <style>
+        body {
+            background: #11998e;
+            background: -webkit-linear-gradient(to right, #38ef7d, #11998e);
+            background: linear-gradient(to right, #38ef7d, #11998e);
+            height: 400px;
+        }
+
+        a {
+            color: #6c5ce7;
+            font-weight: 500;
+        }
+
+        a:hover {
+            color: #7b6cf0;
+            font-weight: 500;
+        }
+
+        .login-img img {
+            width: 100%;
+        }
+
+        h4 {
+            color: #2ecc71;
+            font-weight: 600;
+            text-decoration: 2px underline #2ecc71;
+            text-underline-offset: 5px;
+        }
+
+        p {
+            text-align: justify;
+            font-size: 15px;
+            font-style: italic;
+        }
+
+        .navbar-nav a {
+            text-decoration: none;
+            color: #2ecc71;
+            font-weight: 500;
+            font-size: 20px;
+            background: #fff;
+            padding: 5px 10px 5px 10px;
+            border-radius: 5px;
+        }
+
+        .navbar-nav a:hover {
+            background: #2ecc71;
+            color: #fff;
+            transition: ease-in-out 0.4s;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="sb-topnav navbar navbar-expand navbar-dark" style="background: #27ae60;">
+        <!-- Navbar Brand-->
+        <a class="navbar-brand ps-3" href="index.html"><img src="assets/img/ritm-web_v5.png" style="width: 90%;"></a>
+
+
+        <!-- <div class="d-none d-md-inline-block form-inline order-1 order-lg-0 me-4 me-lg-0 text-white ms-2">IVDMD</div> -->
+        <div class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0"></div>
+
+        <!-- Navbar-->
+        <div class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+            <a href="login.html"><i class="bi bi-box-arrow-in-right me-2"></i>Login</a>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <section class="login-form mt-5 min-vh-100">
+                <div class="card">
+                    <div class="card-body p-5">
+                        <div class="row g-0">
+                            <div class="col-md-7">
+                                <div class="card" style="border-radius: 20px;">
+                                    <div class="card-body">
+                                        <h4><i class="bi bi-shield-lock me-2"></i>Create Your Account</h4>
+                                        <!-- <p>Doesn't have an account yet? <a href="">Sign Up</a></p> -->
+                                        <hr>
+                                        <form action="">
+                                            <div class="form-group mb-3">
+                                                <label class="text-secondary"><b>Company Name </b><i>(Complete name
+                                                        registered with the SEC)</i></label>
+                                                <input type="text" class="form-control" name="company_name">
+                                            </div>
+                                            <div class="form-group mb-3">
+                                                <label class="text-secondary"><b>Current Address</b></label>
+                                                <input type="text" class="form-control" name="current_address">
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group mb-3">
+                                                        <label class="text-secondary"><b>Company contact no.</b></label>
+                                                        <input type="text" class="form-control" name="company_contact">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group mb-3">
+                                                        <label class="text-secondary"><b>Company e-mail
+                                                                address</b></label>
+                                                        <input type="email" class="form-control" name="company_email">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="alert alert-success p-1"><i
+                                                    class="bi bi-building ms-2 me-2"></i>Company/Sales Representatives
+                                            </div>
+                                            <div class="form-group mb-3">
+                                                <label class="text-secondary"><b>Name of company/sales
+                                                        representative</b></label>
+                                                <input type="text" class="form-control" name="company_email">
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group mb-3">
+                                                        <label class="text-secondary"><b>Contact No.</b></label>
+                                                        <input type="text" class="form-control" name="company_contact">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group mb-3">
+                                                        <label class="text-secondary"><b>E-mail Address</b></label>
+                                                        <input type="email" class="form-control" name="company_email">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="alert alert-success p-1"><i
+                                                    class="bi bi-building ms-2 me-2"></i>Technical or Product Specialist
+                                            </div>
+                                            <div class="form-group mb-3">
+                                                <label class="text-secondary"><b>Name of technical or product
+                                                        specialist</b></label>
+                                                <input type="text" class="form-control" name="company_email">
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group mb-3">
+                                                        <label class="text-secondary"><b>Contact No.</b></label>
+                                                        <input type="text" class="form-control" name="company_contact">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group mb-3">
+                                                        <label class="text-secondary"><b>E-mail Address</b></label>
+                                                        <input type="email" class="form-control" name="company_email">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="btn-outline-custom">REGISTER ACCOUNT</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-5 d-flex align-items-center">
+                                <div class="login-img">
+                                    <img src="assets/img/Sign-up.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>

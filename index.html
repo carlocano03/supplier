@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link href="assets/img/RITM-Logo.png" rel="icon">
+    <title>IVDMD-RITM</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/custom-style.css" rel="stylesheet" />
+
+    <style>
+        body {
+            background: #11998e;
+            background: -webkit-linear-gradient(to right, #38ef7d, #11998e);
+            background: linear-gradient(to right, #38ef7d, #11998e);
+            max-height: 40vh;
+        }
+
+        a {
+            color: #6c5ce7;
+            font-weight: 500;
+        }
+
+        a:hover {
+            color: #7b6cf0;
+            font-weight: 500;
+        }
+
+        .login-img img {
+            width: 100%;
+        }
+
+        h4 {
+            color: #2ecc71;
+            font-weight: 600;
+            text-decoration: 2px underline #2ecc71;
+            text-underline-offset: 5px;
+        }
+
+        p {
+            text-align: justify;
+            font-size: 15px;
+            font-style: italic;
+        }
+
+        .navbar-nav a {
+            text-decoration: none;
+            color: #2ecc71;
+            font-weight: 500;
+            font-size: 20px;
+            background: #fff;
+            padding: 5px 10px 5px 10px;
+            border-radius: 5px;
+        }
+
+        .navbar-nav a:hover {
+            background: #2ecc71;
+            color: #fff;
+            transition: ease-in-out 0.4s;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="sb-topnav navbar navbar-expand navbar-dark" style="background: #27ae60;">
+        <!-- Navbar Brand-->
+        <a class="navbar-brand ps-3" href=""><img src="assets/img/ritm-web_v5.png" style="width: 90%;"></a>
+
+
+        <!-- <div class="d-none d-md-inline-block form-inline order-1 order-lg-0 me-4 me-lg-0 text-white ms-2">IVDMD</div> -->
+        <div class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0"></div>
+
+        <!-- Navbar-->
+        <div class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+            <a href="register.html"><i class="bi bi-box-arrow-in-right me-2"></i>Register</a>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <section class="login-form mt-5">
+                <div class="card">
+                    <div class="card-body py-5 ps-5 pe-5">
+                        <div class="row g-0">
+                            <div class="col-md-5">
+                                <div class="card" style="border-radius: 20px;">
+                                    <div class="card-body p-5">
+                                        <h4><i class="bi bi-shield-lock me-2"></i>Login Your Account</h4>
+                                        <!-- <p>Doesn't have an account yet? <a href="">Sign Up</a></p> -->
+                                        <hr>
+                                        <form action="dashboard.html">
+                                            <div class="form-group mb-4">
+                                                <label class="text-secondary"><b>User ID</b></label>
+                                                <input type="text" class="form-control" name="username"
+                                                    placeholder="Enter your ID No.">
+                                            </div>
+                                            <div class="form-group mb-4">
+                                                <label class="text-secondary"><b>Password</b></label>
+                                                <a href="#exampleModal" data-bs-toggle="modal" class="float-end"><i
+                                                        class="bi bi-lock"></i>Forgot
+                                                    Password?</a>
+                                                <input type="password" class="form-control" name="password"
+                                                    placeholder="Enter your password">
+                                            </div>
+                                            <button type="submit" class="btn-custom">LOGIN</button>
+                                            <div class="text-center mt-3 mb-3 text-secondary"><b>OR</b></div>
+                                            <a href="register.html"><button type="button"
+                                                    class="btn-outline-custom">SIGN UP</button></a>
+                                            <hr>
+                                            <p class="text-muted">DISCLAIMER: Some features of the systems behave
+                                                differently with various
+                                                browsers, we recommend using the latest version of Internet Explorer,
+                                                Firefox Mozilla, Google Chrome and/or Safari
+                                            </p>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="login-img">
+                                    <img src="assets/img/login-img.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" data-bs-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h4>Reset Your Password</h4>
+                    <hr>
+                    <div class="form-group">
+                        <label class="text-secondary"><b>Registered e-mail address</b></label>
+                        <input type="text" class="form-control" placeholder="Enter your registered email address"
+                            name="registered_email">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary text-white" data-bs-dismiss="modal"><i
+                            class="bi bi-x-square me-2"></i>Close</button>
+                    <button type="button" class="btn btn-outline-success text-white"><i
+                            class="bi bi-save me-2"></i>Reset
+                        Password</button>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>

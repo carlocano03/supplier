@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link href="assets/img/RITM-Logo.png" rel="icon">
+    <title>IVDMD-RITM</title>
+    <link href="https://cdn.datatables.net/1.12.1/css/dataTables.bootstrap5.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link href="https://cdn.datatables.net/responsive/2.3.0/css/responsive.bootstrap.min.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/custom-style.css" rel="stylesheet" />
+
+    <style>
+        #table td:nth-child(1) {
+            text-align: center;
+            width: 150px;
+        }
+    </style>
+</head>
+
+<body class="sb-nav-fixed" onload="startTime()">
+    <nav class="sb-topnav navbar navbar-expand navbar-dark" style="background: #27ae60;">
+        <!-- Navbar Brand-->
+        <a class="navbar-brand ps-3" href="dashboard.html"><img src="assets/img/ritm-web_v5.png" style="width: 90%;"></a>
+        <!-- Sidebar Toggle-->
+        <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!">
+            <i class="fas fa-bars"></i></button>
+
+        <div class="d-none d-md-inline-block form-inline order-1 order-lg-0 me-4 me-lg-0 text-white ms-2 fw-bold">IVDMD
+            Product Validation</div>
+        <div class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0"></div>
+
+        <!-- Navbar-->
+        <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+            <li class="nav-item dropdown">
+                <a class="nav-link active" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <i class="bi bi-bell-fill"></i>
+                    <span class="position-absolute top-20 start-90 translate-middle badge rounded-pill bg-danger">
+                        1
+                    </span>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                    <li class="text-center text-muted">You have 1 notification</li>
+                    <li>
+                        <hr class="dropdown-divider" />
+                    </li>
+
+                    <li class="dropdown-item">
+                        <i class="bi bi-bell-fill"></i>
+                        <p>Hello World</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_nav">
+            <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                <div class="sb-sidenav-menu">
+                    <div class="nav">
+                        <div class="sb-sidenav-menu-heading text-center">
+                            <img src="assets/img/avatar-new.png" alt="Avatar Image">
+                            <h5>Supplier Portal</h5>
+                            <div class="avatar-text">21-0183</div>
+                            <div class="avatar-text mb-1">Sample Department</div>
+                            <a href="" class="logout-btn"><i class="bi bi-power me-1"></i>Logout</a>
+                        </div>
+                        <hr class="mt-0" style="background: #474787;">
+                        <a class="nav-link active" href="dashboard.html">
+                            <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                            Main Dashboard
+                        </a>
+                        <a class="nav-link" href="product_registration.html">
+                            <div class="sb-nav-link-icon"><i class="bi bi-pencil-square"></i></div>
+                            Apply a kit
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div id="layoutSidenav_content">
+            <main>
+                <div class="container-fluid px-4">
+                    <h1 class="mt-4">Dashboard</h1>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><span id="date"></span></li>
+                        <li class="breadcrumb-item"><span id="clock"></span></li>
+                    </ol>
+
+                    <div class="card card-dashboard">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-xl-7 col-md-6 mb-5">
+                                    <div class="pt-4 ps-3 pe-3 mt-5">
+                                        <h5 class="fw-bold" style="color: #27ae60;">Welcome back, your dashboard is
+                                            ready!</h5>
+                                        <p style="text-align: justify;">
+                                            The COVID-19 pandemic has ushered in the introduction of new laboratory diagnostic tests (PCR detection kits, 
+                                            antibody tests, antigen tests). In accordance to the DOH Department Order 2020-0820 “Institutionalizing and Strengthening 
+                                            the National Reference Laboratories in the Philippines,” the Research Institute for Tropical Medicine has been mandated to 
+                                            perform an evaluation of In-Vitro Diagnostic Medical Devices (IVDMDs) in collaboration with the FDA to ensure their quality 
+                                            and good performance in the local setting.
+                                        </p>
+                                        <button class="btn-started">Get Started<i
+                                                class="fas fa-chevron-right ms-2"></i></button>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-md-6">
+                                    <img src="assets/img/dashboard.png" alt="Dashboard-Img"
+                                        style="width: 100%; margin-top: -50px;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-4">
+                        <div class="col-xl-3 col-md-6 mb-2">
+                            <div class="card card-primary mb-4 guest">
+                                <div class="card-body p-2">
+                                    <div class="card-avatar-success me-3">
+                                        <i class="fas fa-list-ul fa-2x mx-auto text-success"></i>
+                                    </div>
+                                    <div class="card-text">
+                                        <h5>TOTAL REGISTERED</h5>
+                                        <h4>0</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-6 mb-2">
+                            <div class="card card-primary mb-4 guest">
+                                <div class="card-body p-2">
+                                    <div class="card-avatar-primary me-3">
+                                        <i class="fas fa-chart-bar fa-2x mx-auto text-primary"></i>
+                                    </div>
+                                    <div class="card-text">
+                                        <h5>FOR PAYMENT</h5>
+                                        <h4>0</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-6 mb-2">
+                            <div class="card card-primary mb-4 guest">
+                                <div class="card-body p-2">
+                                    <div class="card-avatar-warning me-3">
+                                        <i class="fas fa-folder-open fa-2x mx-auto text-warning"></i>
+                                    </div>
+                                    <div class="card-text">
+                                        <h5>FOR TECHNICAL REVIEW</h5>
+                                        <h4>0</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-6 mb-2">
+                            <div class="card card-primary mb-4 guest">
+                                <div class="card-body p-2">
+                                    <div class="card-avatar-danger me-3">
+                                        <i class="fas fa-calendar-alt fa-2x mx-auto text-danger"></i>
+                                    </div>
+                                    <div class="card-text">
+                                        <h5>REGISTERED TODAY</h5>
+                                        <h4>0</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-9 mb-4">
+                            <div class="row">
+                                <div class="col-12 mb-3">
+                                    <div class="table-responsive">
+                                        <table class="table" width="100%" id="table">
+                                            <thead>
+                                                <tr>
+                                                    <th class="text-center">Action</th>
+                                                    <th>IVDMD</th>
+                                                    <th>Kit Details</th>
+                                                    <th>Stage</th>
+                                                    <th>Status</th>
+                                                    <th>Date Created</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><a href="product.html" class="btn btn-outline-success btn-sm"><i class="bi bi-folder-check me-2"></i>View Product</a></td>
+                                                    <td>
+                                                        Rapid Antigen test<br>
+                                                        <span class="text-danger">New Application</span>
+                                                    </td>
+                                                    <td>Test</td>
+                                                    <td><span class="badge bg-secondary">Stage 1</span></td>
+                                                    <td><span class="badge bg-danger">For Approval</span></td>
+                                                    <td>Mon Nov 14, 2022 9:07 am</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><a href="product.html" class="btn btn-outline-success btn-sm"><i class="bi bi-folder-check me-2"></i>View Product</a></td>
+                                                    <td>
+                                                        Rapid Antigen test<br>
+                                                        <span class="text-danger">Request for re-evaluation</span>
+                                                    </td>
+                                                    <td>Test</td>
+                                                    <td><span class="badge bg-secondary">Stage 1</span></td>
+                                                    <td><span class="badge bg-danger">Product Failed</span></td>
+                                                    <td>Mon Nov 14, 2022 9:07 am</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 mb-5">
+                            <div class="card">
+                                <div class="card-header" style="background: #009879; color: #fff; font-weight: 500;"><i
+                                        class="bi bi-list-columns-reverse me-2"></i>Status Board</div>
+                                <div class="card-body">
+                                    <div class="status-board">
+                                        <div class="form-group">
+                                            <label>Kit Details:</label>
+                                            <div class="details text-secondary">Test Kit</div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Stage:</label>
+                                            <span class="details text-secondary">1</span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Current Process:</label>
+                                            <div class="details text-secondary">Sample Process</div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Remarks from technical team:</label>
+                                            <div class="details text-secondary">Sample remarks</div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Remarks from LRD secretariat:</label>
+                                            <div class="details text-secondary">Sample remarks</div>
+                                        </div>
+                                        <hr class="mt-2 mb-2" style="height:2px; background:#27ae60;">
+
+                                        <div class="form-group">
+                                            <label>Kit Details:</label>
+                                            <div class="details text-secondary">Test Kit</div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Stage:</label>
+                                            <span class="details text-secondary">1</span>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Current Process:</label>
+                                            <div class="details text-secondary">Sample Process</div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Remarks from technical team:</label>
+                                            <div class="details text-secondary">Sample remarks</div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Remarks from LRD secretariat:</label>
+                                            <div class="details text-secondary">Sample remarks</div>
+                                        </div>
+                                        <hr class="mt-2 mb-2" style="height:2px; background:#27ae60;">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End of row -->
+
+
+
+                </div>
+            </main>
+
+            <footer class="py-3 text-white mt-auto" style="background: #fff;">
+                <div class="container-fluid px-4">
+                    <div class="d-flex align-items-center justify-content-between small">
+                        <div class="text-secondary">Copyright &copy; Research Institute for Tropical Medicine</div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/date-time.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.3.0/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.3.0/js/responsive.bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#table').DataTable({
+                language: {
+                    search: '', searchPlaceholder: "Search Here...",
+                    processing: '<i class="fa fa-spinner fa-spin fa-3x fa-fw"></i><br>Loading... ',
+                    "info": "_START_-_END_ of _TOTAL_ entries",
+                    paginate: {
+                        next: '<i class="fas fa-chevron-right"></i>',
+                        previous: '<i class="fas fa-chevron-left"></i>'
+                    }
+                },
+                "ordering": false,
+            });
+        });
+    </script>
+</body>
+
+</html>
